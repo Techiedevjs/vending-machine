@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'DotsAllForNow';
+    font-family: 'Dots All For Now JL';
     src: url(fonts/DotsAllForNow.ttf);
 }
 ::-webkit-scrollbar {
@@ -101,13 +101,63 @@ body{
 }
 .container{
     position: absolute;
-    top: 2.6vw;
-    width: 54.94vw;
+    top: 2vw;
+    width: 53.64583vw;
     aspect-ratio: 1030/1080;
-    background: url(images/vending-bg.svg);
+    background: url(images/test.png);
     background-repeat: no-repeat;
     background-size: contain;
     padding: 2vw;
+    border-radius: 2.6vw;
+    border: 1.3vw solid #4F4F4F;
+}
+.close-menu{
+    position: absolute;
+    top: 6.9vh;
+    right: 6.9vh;
+    z-index: 7;
+    cursor: pointer;
+}
+.close-menu svg{
+    width: 4.8vh;
+    height: 4.8vh;
+}
+.escape-btn{
+    display: flex;
+    position: absolute;
+    bottom: 2.47vw;
+    right: 2.47vw;
+    gap: 1.5625vw;
+    z-index: 7;
+}
+.escape-btn span{
+    color: #292929;
+    font-size: var(--fontxsmall);
+    font-weight: 800;
+    height: 1.97vw;
+    width: 1.97vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 0.5vw;
+}
+.escape-btn div{
+    border-radius: var(--fontxsmall);
+    border: 0.1vw solid rgba(255, 255, 255, 0.25);
+    padding: 0.2vw;
+    opacity: .25;
+    cursor: pointer;
+}
+.escape-btn p{
+    font-family: 'Outfit';
+    color: rgba(255, 255, 255, 0.50);
+    color: rgba(255, 255, 255, 0.50);
+    font-size: var(--fontmedium);
+    font-weight: 600;
+}
+.escape-btn div:hover{
+    opacity: 1;
 }
 header{
     background: url(images/header.png);
@@ -137,8 +187,87 @@ main{
 }
 aside{
     width: 12.29166vw;
-    aspect-ratio: 224/820;
+    aspect-ratio: 236/826;
     background: url(images/aside-bg.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    padding: 1.35vw;
+}
+.keys{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.1vw;
+    border-radius: 0.5vw;
+    overflow: hidden;
+    margin-bottom: 1vw;
+}
+.keys p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.125vw;
+    height: 3.125vw;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1.25vw;
+    font-weight: 700;
+    background: url(images/black.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.35) inset;
+    cursor: pointer;
+}
+.backspace svg, .enter svg{
+    width: 1.25vw;
+    height: 1.25vw;
+}
+.mode-of-payment{
+    margin-bottom: 7.2vh;
+}
+.mode-of-payment section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.677vw;
+}
+.mode-of-payment section svg{
+    width: 1.25vw;
+    height: 1.25vw;
+}
+.mode-of-payment section p{
+    color: #FFFFFF40;
+    font-size: 0.9375vw;
+    font-weight: 800;
+}
+.mode-of-payment section div{
+    display: flex;
+    align-items: center;
+    gap: var(--fontsmall);
+}
+.mode-of-payment section span{
+    width: 0.41vw;
+    height: 0.41vw;
+    background-color: #FFFFFF40;
+    border-radius: 9999px;
+}
+.pay{
+    width: 9.58vw;
+    aspect-ratio: 184/50;
+}
+aside form{
+    margin-bottom: 1vw;
+}
+aside form p{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Dots All For Now JL';
+    font-size: var(--fontsmall);
+    font-weight: 400;
+    line-height: 107.3%;
+}
+aside form input{
+    background: transparent;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
 }
