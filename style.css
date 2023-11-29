@@ -14,9 +14,9 @@
     background: rgba(255, 255, 255, 0.50);
 }
 :root{
-    --fontxsmall: 0.73vw;
-    --fontsmall: 0.83vw;
-    --fontmedium: 1vw;
+    --fontxsmall: 1.3vh;
+    --fontsmall: 1.48vh;
+    --fontmedium: 1.85vh;
     --fontlarge: 1.2vw;
     --fontxl: 1.4vw;
     --padlittle: clamp(5px, 0.5vw, 25px);
@@ -101,13 +101,13 @@ body{
 }
 .container{
     position: absolute;
-    top: 2vw;
-    width: 53.64583vw;
-    aspect-ratio: 1030/1080;
+    bottom: -5vh;
+    height: 100vh;
+    aspect-ratio: 1080/1130;
     background: url(images/test.png);
     background-repeat: no-repeat;
-    background-size: contain;
-    padding: 2vw;
+    background-size: cover;
+    padding: 3.14vh;
     border-radius: 2.6vw;
     border: 1.3vw solid #4F4F4F;
 }
@@ -130,7 +130,7 @@ body{
     gap: 1.5625vw;
     z-index: 7;
 }
-.escape-btn span{
+.escape-btn span, .close-menu span{
     color: #292929;
     font-size: var(--fontxsmall);
     font-weight: 800;
@@ -142,7 +142,7 @@ body{
     background-color: white;
     border-radius: 0.5vw;
 }
-.escape-btn div{
+.escape-btn div, .close-menu{
     border-radius: var(--fontxsmall);
     border: 0.1vw solid rgba(255, 255, 255, 0.25);
     padding: 0.2vw;
@@ -156,12 +156,13 @@ body{
     font-size: var(--fontmedium);
     font-weight: 600;
 }
-.escape-btn div:hover{
+.escape-btn div:hover, .close-menu:hover{
     opacity: 1;
 }
 header{
     background: url(images/header.png);
-    width: 36.354vw;
+    /* width: 36.354vw; */
+    height: 15vh;
     aspect-ratio: 698/162;
     background-repeat: no-repeat;
     background-size: cover;
@@ -173,7 +174,7 @@ header{
 header div{
     text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.85), 0px 0px 85px #FFF;
     font-family: 'Neonderthaw';
-    font-size: 4.16vw;
+    font-size: 7.4vh;
     font-weight: 400;
     color: #FFF;
     text-align: center;
@@ -186,12 +187,13 @@ main{
     justify-content: space-between;
 }
 aside{
-    width: 12.29166vw;
+    width: 21.85vh;
+    /* width: 12.29166vw; */
     aspect-ratio: 236/826;
     background: url(images/aside-bg.png);
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 1.35vw;
+    padding: 2.4vh;
 }
 .keys{
     display: grid;
@@ -199,16 +201,17 @@ aside{
     gap: 0.1vw;
     border-radius: 0.5vw;
     overflow: hidden;
-    margin-bottom: 1vw;
+    margin-bottom: 1.85vh;
 }
 .keys p{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 3.125vw;
-    height: 3.125vw;
+    /* width: 3.125vw; */
+    /* height: 3.125vw; */
+    aspect-ratio: 1/1;
     color: rgba(255, 255, 255, 0.65);
-    font-size: 1.25vw;
+    font-size: var(--fontmedium);
     font-weight: 700;
     background: url(images/black.svg);
     background-repeat: no-repeat;
@@ -217,8 +220,8 @@ aside{
     cursor: pointer;
 }
 .backspace svg, .enter svg{
-    width: 1.25vw;
-    height: 1.25vw;
+    width: var(--fontmedium);
+    height: var(--fontmedium);
 }
 .mode-of-payment{
     margin-bottom: 7.2vh;
@@ -227,15 +230,16 @@ aside{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.677vw;
+    width: 100%;
+    padding: 1.1vh;
 }
 .mode-of-payment section svg{
-    width: 1.25vw;
-    height: 1.25vw;
+    width: 2.2vh;
+    height: 2.2vh;
 }
 .mode-of-payment section p{
     color: #FFFFFF40;
-    font-size: 0.9375vw;
+    font-size: 1.667vh;
     font-weight: 800;
 }
 .mode-of-payment section div{
@@ -250,11 +254,23 @@ aside{
     border-radius: 9999px;
 }
 .pay{
-    width: 9.58vw;
+    width: 100%;
     aspect-ratio: 184/50;
+    cursor: pointer;
 }
 aside form{
-    margin-bottom: 1vw;
+    margin:0 auto 1vw auto;
+    text-align: center;
+    /* padding: 1.2vh; */
+    width: 100%;
+    aspect-ratio: 192/152;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url(images/form-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 aside form p{
     color: #FFF;
@@ -263,11 +279,93 @@ aside form p{
     font-size: var(--fontsmall);
     font-weight: 400;
     line-height: 107.3%;
+    margin-bottom: 4vh;
 }
 aside form input{
+    color: rgba(255, 255, 255, 0.45);
+    font-family: 'Dots All For Now JL';
+    font-size: 2.22vh;
+    font-weight: 400;
     background: transparent;
-    width: 100%;
+    width: 9.25vh;
     border: none;
     outline: none;
     text-align: center;
+    padding-bottom: 1.1vh;
+    border-bottom: 2px dotted rgba(255, 255, 255, 0.35);;
+}
+.keys-container{
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2.6vw;
+    border: 0.5vw solid #4F4F4F;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.65) inset, 0px 0px 150px 0px rgba(0, 0, 0, 0.45);
+}
+.keys-container section{
+    width: 18.541vw;
+    aspect-ratio: 356/532;
+    background: url(images/test.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.num-alpha{
+    width: 16.04vw;
+    aspect-ratio: 306/484;
+    border-radius: 1.526vw;
+    /* border: 0.3125vw solid rgba(255, 255, 255, 0.01); */
+    background: url(images/num-alpha.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.35) inset;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4166vw;
+    padding: 1vw;
+    /* border: 0.3125vw solid rgba(255, 255, 255, 0.01); */
+}
+.num-alpha div{
+    width: 4.166vw;
+    aspect-ratio: 1/1;
+    padding: .5vw;
+    /* background: url(images/rounded-key-bg.svg); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 100px;
+    background: rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.35) inset;
+}
+.num-alpha p{
+    color: rgba(255, 255, 255, 0.65);
+    font-size: var(--fontlarge);
+    font-weight: 700;
+    background: url(images/black.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+}
+.num-alpha div:hover p{
+    color: rgba(255, 255, 255, 0.90);
+}
+.num-alpha div:active p{
+    color: #FFF;
+}
+.num-alpha div:active{
+    background: rgba(0, 0, 0, 0.25);
 }
