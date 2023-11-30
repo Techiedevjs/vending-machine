@@ -101,8 +101,8 @@ body{
 }
 .container{
     position: absolute;
-    bottom: -5vh;
-    height: 100vh;
+    bottom: -8.1vh;
+    height: 104.6vh;
     aspect-ratio: 1080/1130;
     background: url(images/test.png);
     background-repeat: no-repeat;
@@ -161,7 +161,7 @@ body{
 }
 header{
     background: url(images/header.png);
-    /* width: 36.354vw; */
+    /* width: 64.63vh; */
     height: 15vh;
     aspect-ratio: 698/162;
     background-repeat: no-repeat;
@@ -183,7 +183,7 @@ header div{
 }
 main{
     display: flex;
-    gap: 1.458vw;
+    gap: 1.85vh;
     justify-content: space-between;
 }
 aside{
@@ -199,7 +199,7 @@ aside{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0.1vw;
-    border-radius: 0.5vw;
+    border-radius: 0.935vh;
     overflow: hidden;
     margin-bottom: 1.85vh;
 }
@@ -225,6 +225,7 @@ aside{
 }
 .mode-of-payment{
     margin-bottom: 7.2vh;
+    /* overflow: hidden; */
 }
 .mode-of-payment section{
     display: flex;
@@ -232,6 +233,17 @@ aside{
     align-items: center;
     width: 100%;
     padding: 1.1vh;
+    background: url(images/Textures.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0.185vh solid rgba(255, 255, 255, 0.01);
+    cursor: pointer;
+}
+.card{
+    border-radius: 0.925vh 0.925vh 0 0;
+}
+.cash{
+    border-radius: 0 0 0.925vh 0.925vh;
 }
 .mode-of-payment section svg{
     width: 2.2vh;
@@ -268,7 +280,7 @@ aside form{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: url(images/form-bg.png);
+    background: url(images/form-bg.svg);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -368,4 +380,127 @@ aside form input{
 }
 .num-alpha div:active{
     background: rgba(0, 0, 0, 0.25);
+}
+.vending-machine{
+    width: 64.63vh;
+    aspect-ratio: 698/832;
+    background: url(images/shelf.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 5.185vh 4.26vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-between;
+    grid-template-rows: fit-content(100);
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 2vh;
+}
+.product{
+    position: relative;
+    width: 10.185vh;
+    aspect-ratio: 110/144;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.product .price{
+    cursor: pointer;
+    color: #FFF;
+    font-family: 'Dots All For Now JL';
+    font-size: var(--fontsmall);
+    font-weight: 400;
+    border-radius: 0.925vh;
+    border: 0.185vh solid rgba(0, 0, 0, 0.65);
+    background: #0f0f0f;
+    width: 100%;
+    aspect-ratio: 110/30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product div{
+    width: 10.185vh !important;
+    aspect-ratio: 110/110 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(33, 33, 33);
+    border-radius: 0.925vh;
+    border: 0.185vh solid rgba(0, 0, 0, 0.65);
+    cursor: pointer;
+}
+.product-number{
+    color: #FFF;
+    font-family: 'Dots All For Now JL';
+    font-size: var(--fontsmall);
+    width: 4.63vh;
+    aspect-ratio: 50/30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -2.2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0.925vh;
+    z-index: 2;
+    pointer-events: none;
+    border: 0.185vh solid rgba(0, 0, 0, 0.65);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #0F0F0F;
+}
+.product div img{
+    max-width: calc(0.75 * 10.185vh);
+    max-height: calc(0.75 * 10.185vh);
+    object-fit: contain;
+    box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.65);
+}
+.product:hover div{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), #0F0F0F;
+    backdrop-filter: blur(22.5px);
+}
+.product:active div{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%), #0F0F0F;
+}
+.product:hover div img{
+    transform: scale(1.05);
+}
+.product:hover .price{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%), #0F0F0F;
+}
+.product:active .price{
+    background: linear-gradient(0deg, #000 0%, #000 100%), #0F0F0F;
+}
+.active div, .active:hover div{
+    background: linear-gradient(0deg, rgba(29, 120, 227, 0.55) 0%, rgba(29, 120, 227, 0.55) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), #0F0F0F;
+    backdrop-filter: blur(22.5px);
+}
+.active .price, .active:hover .price{
+    background: linear-gradient(0deg, rgba(29, 120, 227, 0.85) 0%, rgba(29, 120, 227, 0.85) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), #0F0F0F;
+}
+.active .product-number, .active:hover .product-number{
+    border: 2px solid rgba(0, 0, 0, 0.20);
+    background: #FFF;
+    color: #000;
+}
+#a5 div{
+    border-top-right-radius: 1.85vh !important;
+}
+#a1 div{
+    border-top-left-radius: 1.85vh !important;
+}
+.content-container{
+    position: relative;
+}
+.order-pop-up{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+    z-index: 3;
+    /* background: rgba(0, 0, 0, 0.45); */
+    /* border-radius: 20px; */
 }
