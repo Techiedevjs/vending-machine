@@ -24,32 +24,36 @@
                 <span>X</span>
             </div>
         </div>
-        <div class="container hide">
+        <div class="container">
             <header>
               <div>Vending Machine</div>
             </header>
             <main>
-              <section>
+                <div class="content-container">
+                    <section class="vending-machine"></section>
+                    <div class="order-pop-up">
 
-              </section>
+                    </div>
+                </div>
+              
               <aside>
                 <form>
                     <p>ENTER PRODUCT NUMBER</p>
-                    <input type="text" name="" id="">
+                    <input type="text" name="" id="" maxlength="2" class="product-number-search">
                 </form>
                 <section class="keys">
-                    <p>1</p>
-                    <p>2</p>
-                    <p>3</p>
-                    <p>4</p>
-                    <p>5</p>
-                    <p>6</p>
-                    <p>7</p>
-                    <p>8</p>
-                    <p>9</p>
-                    <p>A</p>
-                    <p>B</p>
-                    <p>C</p>
+                    <p class="number">1</p>
+                    <p class="number">2</p>
+                    <p class="number">3</p>
+                    <p class="number">4</p>
+                    <p class="number">5</p>
+                    <p class="number">6</p>
+                    <p class="number">7</p>
+                    <p class="number">8</p>
+                    <p class="number">9</p>
+                    <p class="number">A</p>
+                    <p class="number">B</p>
+                    <p class="number">C</p>
                     <p class="backspace">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <g clip-path="url(#clip0_17817_36483)">
@@ -62,7 +66,7 @@
                             </defs>
                         </svg>
                     </p>
-                    <p>D</p>
+                    <p class="number">D</p>
                     <p class="enter">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <mask id="mask0_17817_36515" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="22" height="22">
@@ -78,7 +82,7 @@
                 </section>
 
                 <section class="mode-of-payment">
-                    <section>
+                    <section class="card">
                         <div>
                             <span></span>
                             <p>CARD</p>
@@ -101,7 +105,7 @@
                             </defs>
                         </svg>
                     </section>
-                    <section>
+                    <section class="cash">
                         <div>
                             <span></span>
                             <p>CASH</p>
@@ -126,7 +130,7 @@
                     </section>
                 </section>
 
-                <svg class="pay" xmlns="http://www.w3.org/2000/svg" width="186" height="52" viewBox="0 0 186 52" fill="none">
+                <svg class="pay" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 186 52" fill="none">
                     <mask id="path-1-outside-1_19250_707" maskUnits="userSpaceOnUse" x="0" y="0" width="186" height="52" fill="black">
                       <rect fill="white" width="186" height="52"/>
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M11 1C5.47715 1 1 5.47715 1 11V41C1 46.5228 5.47715 51 11 51H175C180.523 51 185 46.5228 185 41V11C185 5.47715 180.523 1 175 1H11ZM80.356 27.428V32H77.134V19.238H79.69H80.356H82.768C83.584 19.238 84.322 19.406 84.982 19.742C85.642 20.066 86.164 20.534 86.548 21.146C86.932 21.746 87.124 22.478 87.124 23.342C87.124 24.182 86.932 24.914 86.548 25.538C86.164 26.15 85.642 26.618 84.982 26.942C84.322 27.266 83.584 27.428 82.768 27.428H80.356ZM80.356 25.034H82.21C82.522 25.034 82.804 24.974 83.056 24.854C83.32 24.722 83.53 24.53 83.686 24.278C83.842 24.026 83.92 23.714 83.92 23.342C83.92 22.97 83.842 22.658 83.686 22.406C83.53 22.142 83.32 21.95 83.056 21.83C82.804 21.698 82.522 21.632 82.21 21.632H80.356V25.034ZM91.7476 19.238L86.7976 32H90.0916L90.8781 29.768H95.6239L96.3916 32H99.7576L94.8616 19.238H91.7476ZM94.7447 27.212L93.2796 22.9523L91.7787 27.212H94.7447ZM106.138 26.648V32H102.916V26.7934L98.4159 19.238H102.106L104.536 23.5697L106.966 19.238H110.584L106.138 26.648Z"/>
@@ -158,7 +162,7 @@
               </aside>
             </main>
         </div>
-        <div class="keys-container">
+        <div class="keys-container hide">
             <div>
                 <section>
                     <div class="num-alpha">
