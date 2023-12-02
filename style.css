@@ -254,21 +254,41 @@ aside{
     font-size: 1.667vh;
     font-weight: 800;
 }
-.mode-of-payment section div{
+.mode-of-payment section .mode{
     display: flex;
     align-items: center;
     gap: var(--fontsmall);
 }
-.mode-of-payment section span{
-    width: 0.41vw;
-    height: 0.41vw;
+.mode div{
+    width: 1.3vh;
+    height: 1.3vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     background-color: #FFFFFF40;
-    border-radius: 9999px;
+    border-radius: 50%;
+    position: relative;
+}
+.mode-of-payment section .mode span{
+    display: block;
+    background-color: #ffffff40;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.mode-of-payment section:hover .mode span{
+    width: 0.925vh;
+    height: 0.925vh;
 }
 .pay{
     width: 100%;
     aspect-ratio: 184/50;
     cursor: pointer;
+}
+.pay:hover .path-change{
+    fill-opacity: 0.2;
 }
 aside form{
     margin:0 auto 1vw auto;
@@ -501,6 +521,63 @@ aside form input{
     height: 100%;
     backdrop-filter: blur(2px);
     z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 700;
     /* background: rgba(0, 0, 0, 0.45); */
     /* border-radius: 20px; */
+}
+.order-pop-up p{
+    color: rgba(255, 255, 255, 0.65);
+    font-size: var(--fontmedium);
+}
+.order-pop-up div{
+    margin-top: 2.2vh;
+    margin-bottom: 2.7vh;
+    position: relative;
+    width: 25.5vh;
+    aspect-ratio: 1/1;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 90px 0px rgba(255, 255, 255, 0.65);
+    border-radius: 50%;
+    border: white 0.65vh solid;
+}
+.order-pop-up div svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.order-pop-up div img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.order-pop-up h4{
+    font-size: 2.22vh;
+}
+.order-pop-up h4::first-letter{
+    text-transform: capitalize;
+}
+.order-pop-up button{
+    padding: 1.85vh 2.3vh;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: var(--fontxsmall);
+    letter-spacing: 0.8px;
+    border-radius: 1.85vh;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.15);
+    font-weight: 700;
+}
+.method-active p{
+    color: #4E9DFA !important;
+}
+.method-active svg path{
+    fill: #4E9DFA;
+    fill-opacity: 1;
 }
