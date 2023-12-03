@@ -111,7 +111,8 @@ const products = [
         productNumber: 'd4',
         productPrice: 35,
         imageUrl: 'images/coca-cola.png'
-    },{
+    },
+    {
         name: 'coca cola',
         productNumber: 'd5',
         productPrice: 35,
@@ -135,11 +136,11 @@ const pickProduct = (productNumber) => {
         document.querySelector('.pay').style.opacity = 1;
         document.querySelector('.pay').style.pointerEvents = 'all';
     }
-    console.log(selectedProductNumber)
     productNumber.classList.toggle('active')
     let parent = productNumber.parentNode
     let siblings = Array.from(parent.children).filter((item) => item !== productNumber)
     siblings.map((item) => item.classList.remove('active'))
+    showPrice()
     // console.log(document.getElementById(productNumber))
 }
 
@@ -180,20 +181,39 @@ document.querySelector('.backspace').addEventListener('click', () => {
 document.querySelectorAll('.number').forEach(element => {
     element.addEventListener('click', () => {
         if(productNumberSearch.value.length < 2){
+            productNumberSearch.setSelectionRange(0,0)
+            productNumberSearch.focus()
             productNumberSearch.value += element.textContent
         }
     })
 });
-
+document.querySelector('.product-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    selectProductNumber()
+})
 const selectProductNumber = () => {
     let selected = document.querySelector(`#${productNumberSearch.value.toLowerCase()}`);
-    console.log(selected)
     if (selected){
         pickProduct(document.querySelector(`#${productNumberSearch.value.toLowerCase()}`));
+        selectedProductNumber = selected.id
     } else {
         Array.from(document.querySelector('.vending-machine').children).map((item) => item.classList.remove('active'))
+        selectProductNumber = '';
     }
+    showPrice()
     productNumberSearch.value = '';
+}
+
+const showPrice = () => {
+    if(selectedProductNumber){
+        document.querySelector('.product-form').classList.add('hide-header');
+        document.querySelector('.price-form').classList.remove('hide-header');
+        let product = products.filter((p) => p.productNumber === selectedProductNumber)[0]
+        document.querySelector('.price-form input').value = product.productPrice.toFixed(2)
+    } else {
+        document.querySelector('.product-form').classList.remove('hide-header');
+        document.querySelector('.price-form').classList.add('hide-header');
+    }
 }
 
 const card = document.querySelector('.card')
