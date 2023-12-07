@@ -6,7 +6,7 @@ const products = [
         imageUrl: 'images/coca-cola.png'
     },
     {
-        name: 'sneakers',
+        name: 'mars',
         productNumber: 'a2',
         productPrice: 35,
         imageUrl: 'images/mars.png'
@@ -18,7 +18,7 @@ const products = [
         imageUrl: 'images/coca-cola.png'
     },
     {
-        name: 'coca cola',
+        name: 'snickers',
         productNumber: 'a4',
         productPrice: 35,
         imageUrl: 'images/snickers.png'
@@ -119,6 +119,7 @@ const products = [
         imageUrl: 'images/coca-cola.png'
     },
 ]
+document.querySelector('.product-number-search').focus()
 let selectedProductNumber;
 if(!selectedProductNumber){
     document.querySelector('.pay').style.opacity = 0.35;
@@ -127,11 +128,13 @@ if(!selectedProductNumber){
 const pickProduct = (productNumber) => {
     if(selectedProductNumber === productNumber.id){
         selectedProductNumber = ''
+        productNumberSearch.focus()
     } else {
         selectedProductNumber = productNumber.id
     }
     if(!selectedProductNumber){
-        document.querySelector('.pay').style.opacity = 0.35
+        document.querySelector('.pay').style.opacity = 0.35;
+        document.querySelector('.pay').style.pointerEvents = 'none';
     } else {
         document.querySelector('.pay').style.opacity = 1;
         document.querySelector('.pay').style.pointerEvents = 'all';
@@ -141,19 +144,42 @@ const pickProduct = (productNumber) => {
     let siblings = Array.from(parent.children).filter((item) => item !== productNumber)
     siblings.map((item) => item.classList.remove('active'))
     showPrice()
+    productNumberSearch.focus()
     // console.log(document.getElementById(productNumber))
 }
 
 const  payForProduct = () => {
     document.querySelector('.order-pop-up').classList.remove('hide');
     let product = products.filter((p) => p.productNumber === selectedProductNumber)[0]
-    console.log(product)
-    document.querySelector('.order-pop-up h4').innerHTML = product.name + ' x1';
-    document.querySelector('.order-pop-up img').src = product.imageUrl;
+    setTimeout(() => {
+        document.querySelector('.loader').style.borderTopColor = '#f3f3f3'
+        document.querySelector('.processing').classList.add('hide')
+        document.querySelector('.recieved').classList.remove('hide')
+        document.querySelector('.open-inventory').classList.remove('hide')
+        document.querySelector('.order-pop-up h4').innerHTML = product.name + ' x1';
+        document.querySelector('.order-pop-up img').src = product.imageUrl;
+    }, 2000);
 }
-
-const openInventory = () => {
+document.querySelector('.order-pop-up').addEventListener('click', (event) => {
+    if (event.target.id === 'order-pop-up') {
+        closeOrderPopUp()
+    }
+})
+const closeOrderPopUp = () => {
+    selectedProductNumber = ''
+    document.querySelector('.loader').style.borderTopColor = 'rgba(255, 255, 255, 0.05)'
     document.querySelector('.order-pop-up').classList.add('hide');
+    document.querySelector('.processing').classList.remove('hide')
+    document.querySelector('.recieved').classList.add('hide')
+    document.querySelector('.order-pop-up h4').innerHTML = ''
+    document.querySelector('.order-pop-up img').src = ''
+    document.querySelector('.open-inventory').classList.add('hide')
+    Array.from(document.querySelector('.vending-machine').children).map((item) => item.classList.remove('active'))
+    showPrice()
+    productNumberSearch.focus()
+}
+const openInventory = () => {
+   closeOrderPopUp()
 }
 
 const pushProducts = (data) => {
@@ -174,6 +200,7 @@ const pushProducts = (data) => {
 
 pushProducts(products)
 const productNumberSearch = document.querySelector('.product-number-search')
+productNumberSearch.focus()
 document.querySelector('.backspace').addEventListener('click', () => {
     let val = productNumberSearch.value
     productNumberSearch.value = val.slice(0, -1)
@@ -198,7 +225,8 @@ const selectProductNumber = () => {
         selectedProductNumber = selected.id
     } else {
         Array.from(document.querySelector('.vending-machine').children).map((item) => item.classList.remove('active'))
-        selectProductNumber = '';
+        selectedProductNumber = '';
+        productNumberSearch.focus()
     }
     showPrice()
     productNumberSearch.value = '';
