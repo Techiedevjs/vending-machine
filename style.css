@@ -426,13 +426,15 @@ aside form input{
     background: url(images/shelf.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 5.185vh 4.26vh;
+    padding: 4.26vh 5.185vh;
+    padding-top: 5.1vh;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    justify-content: space-between;
+    /* place-items: center; */
     grid-template-rows: fit-content(100);
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-row-gap: 2vh;
+    grid-row-gap: 3.7vh;
+    gap: 1vh;
 }
 .product{
     position: relative;
@@ -451,13 +453,18 @@ aside form input{
     font-size: var(--fontsmall);
     font-weight: 400;
     border-radius: 0.925vh;
-    border: 0.185vh solid rgba(0, 0, 0, 0.65);
-    background: #0f0f0f;
-    width: 100%;
+    overflow: hidden;
+    /* border: 0.185vh solid rgba(0, 0, 0, 0.65); */
+    /* background: #0f0f0f; */
+    background: url(images/product-price-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 10.185vh;
     aspect-ratio: 110/30;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: .65;
 }
 .product div{
     width: 10.185vh !important;
@@ -469,9 +476,10 @@ aside form input{
     background: url(images/product-bg.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    /* border-radius: 0.925vh; */
+    border-radius: 0.925vh;
     /* border: 0.185vh solid rgba(0, 0, 0, 0.65); */
     cursor: pointer;
+    opacity: .55;
 }
 .product-number{
     color: #FFF;
@@ -498,8 +506,9 @@ aside form input{
     object-fit: contain;
 }
 .product:hover div{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), #0F0F0F;
-    backdrop-filter: blur(22.5px);
+    background: url(images/product-hover-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .product:active div{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%), #0F0F0F;
@@ -514,14 +523,16 @@ aside form input{
     background: linear-gradient(0deg, #000 0%, #000 100%), #0F0F0F;
 }
 .active div, .active:hover div{
-    background: url(images/product-selected.svg);
+    background: url(images/blue-selected.svg);
     background-repeat: no-repeat;
     background-size: contain;
     /* background: linear-gradient(0deg, rgba(29, 120, 227, 0.55) 0%, rgba(29, 120, 227, 0.55) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), #0F0F0F; */
     backdrop-filter: blur(22.5px);
 }
 .active .price, .active:hover .price{
-    background: linear-gradient(0deg, rgba(29, 120, 227, 0.85) 0%, rgba(29, 120, 227, 0.85) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), #0F0F0F;
+    background: url(images/price-selected-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .active .product-number, .active:hover .product-number{
     border: 2px solid rgba(0, 0, 0, 0.20);
@@ -529,10 +540,34 @@ aside form input{
     color: #000;
 }
 #a5 div{
-    border-top-right-radius: 1.85vh !important;
+    background: url(images/product-right-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#a5:hover div{
+    background: url(images/product-right-hover.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#a5.active div, #a5.active:hover div{
+    background: url(images/product-right-active.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #a1 div{
-    border-top-left-radius: 1.85vh !important;
+    background: url(images/product-left-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#a1:hover div{
+    background: url(images/product-left-hover.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#a1.active div, #a1.active:hover div{
+    background: url(images/product-left-active.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .content-container{
     position: relative;
