@@ -31,6 +31,7 @@
             </header>
             <main>
                 <div class="content-container">
+                    <div class="white-blob"><img src="images/white-blob.svg" alt=""></div>
                     <section class="vending-machine"></section>
                     <div class="order-pop-up hide" id="order-pop-up">
                         <p class="recieved hide">YOU RECIEVED</p>
@@ -55,13 +56,20 @@
                                   </filter>
                                 </defs>
                             </svg>
-                            <img src="" alt="">
+                            <svg class="glow hide" xmlns="http://www.w3.org/2000/svg" width="272" height="272" viewBox="0 0 272 272" fill="none">
+                                <g filter="url(#filter0_f_20335_3686)">
+                                  <circle cx="136" cy="136" r="51" fill="white"/>
+                                </g>
+                                <defs>
+                                  <filter id="filter0_f_20335_3686" x="0" y="0" width="272" height="272" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                    <feGaussianBlur stdDeviation="42.5" result="effect1_foregroundBlur_20335_3686"/>
+                                  </filter>
+                                </defs>
+                              </svg>
+                            <div><img src="" alt=""></div>
                         </article>
-                        <!-- <div class="progress-bar">
-                            <section></section>
-                            
-                            <img src="" alt="">
-                        </div> -->
                         <button onclick="openInventory()" class="open-inventory hide">OPEN INVENTORY</button>
                     </div>
                 </div>
@@ -70,11 +78,18 @@
                 <form class="product-form">
                     <p>ENTER PRODUCT NUMBER</p>
                     <input type="text" name="" maxlength="2" class="product-number-search">
-                    <!-- <input type="text" name="" id="" class="product-cost hide-header"> -->
                 </form>
                 <form class="price-form hide-header">
                     <p>MAKE A PAYMENT</p>
+                    <div class="price-input-svg">
                     <input type="text" name="" id="" class="product-cost">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none">
+                        <path d="M15.6681 13.088L19.3855 13.088L12.1703 1.19629L10.2993 4.26435L15.6681 13.088Z" fill="white" fill-opacity="0.45"/>
+                        <path d="M3.86292 13.3547L9.23047 4.52995H9.20593L11.5627 0.662598L7.8711 0.662598L0.145508 13.3547H3.86292Z" fill="white" fill-opacity="0.45"/>
+                        <path d="M0 13.9775L2.67212 17.0007H17.1995L19.652 13.9775L0 13.9775Z" fill="white" fill-opacity="0.45"/>
+                        <path d="M12.3434 11.8648L9.84057 7.70898L7.31445 11.8424L12.3434 11.8648L9.84057 7.70898L7.31445 11.8424L12.3434 11.8648Z" fill="white" fill-opacity="0.45"/>
+                    </svg>
+                    </div>
                 </form>
                 <section class="keys">
                     <p class="number">1</p>
@@ -117,7 +132,7 @@
                 </section>
 
                 <section class="mode-of-payment">
-                    <section class="card">
+                    <section class="card" onclick="setPaymentMethod('card')">
                         <div class="mode">
                             <div></div>
                             <p>CARD</p>
@@ -140,7 +155,7 @@
                             </defs>
                         </svg>
                     </section>
-                    <section class="cash">
+                    <section class="cash" onclick="setPaymentMethod('cash')">
                         <div class="mode">
                             <div><span></span></div>
                             <p>CASH</p>
