@@ -121,10 +121,17 @@ const products = [
 ]
 document.querySelector('.product-number-search').focus()
 let selectedProductNumber;
-if(!selectedProductNumber){
-    document.querySelector('.pay').style.opacity = 0.35;
-    document.querySelector('.pay').style.pointerEvents = 'none';
+let paymentMethod;
+const setPaymentMethod = (mode) => {
+    paymentMethod = mode
 }
+const checkIfSelected = () => {
+    if(!selectedProductNumber){
+        document.querySelector('.pay').style.opacity = 0.35;
+        document.querySelector('.pay').style.pointerEvents = 'none';
+    }
+}
+checkIfSelected()
 const pickProduct = (productNumber) => {
     if(selectedProductNumber === productNumber.id){
         selectedProductNumber = ''
@@ -155,6 +162,7 @@ const  payForProduct = () => {
         document.querySelector('.loader').style.borderTopColor = '#f3f3f3'
         document.querySelector('.processing').classList.add('hide')
         document.querySelector('.recieved').classList.remove('hide')
+        document.querySelector('.glow').classList.remove('hide')
         document.querySelector('.open-inventory').classList.remove('hide')
         document.querySelector('.order-pop-up h4').innerHTML = product.name + ' x1';
         document.querySelector('.order-pop-up img').src = product.imageUrl;
@@ -171,17 +179,21 @@ const closeOrderPopUp = () => {
     document.querySelector('.order-pop-up').classList.add('hide');
     document.querySelector('.processing').classList.remove('hide')
     document.querySelector('.recieved').classList.add('hide')
+    document.querySelector('.glow').classList.add('hide')
     document.querySelector('.order-pop-up h4').innerHTML = ''
     document.querySelector('.order-pop-up img').src = ''
     document.querySelector('.open-inventory').classList.add('hide')
     Array.from(document.querySelector('.vending-machine').children).map((item) => item.classList.remove('active'))
     showPrice()
     productNumberSearch.focus()
+    checkIfSelected()
+    paymentMethod = ''
+    document.querySelector('.cash').classList.remove('method-active');    
+    document.querySelector('.card').classList.remove('method-active');
 }
 const openInventory = () => {
    closeOrderPopUp()
 }
-
 const pushProducts = (data) => {
     document.querySelector('.vending-machine').innerHTML = '';
     data.map((item) => {
