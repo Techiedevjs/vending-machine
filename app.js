@@ -205,6 +205,7 @@ const pushProducts = (data) => {
                 <img src=${imageUrl} alt="">
             </div>
             <p class="price">${productPrice.toFixed(2)}</p>
+            <section class="white-blob"><img src="images/white-blob.svg" alt=""></section>
         </section>
         `
     })
