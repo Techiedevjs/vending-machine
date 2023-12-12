@@ -189,7 +189,6 @@ body{
 }
 header{
     background: url(images/header.png);
-    /* width: 64.63vh; */
     height: 15vh;
     aspect-ratio: 698/162;
     background-repeat: no-repeat;
@@ -235,8 +234,6 @@ aside{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: 3.125vw; */
-    /* height: 3.125vw; */
     aspect-ratio: 1/1;
     color: rgba(255, 255, 255, 0.65);
     font-size: var(--fontmedium);
@@ -253,19 +250,15 @@ aside{
 }
 .mode-of-payment{
     margin-bottom: 7.2vh;
-    /* overflow: hidden; */
 }
 .mode-of-payment section{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    /* aspect-ratio: 184/50; */
     padding: 1.1vh;
-    /* background: url(images/Textures.png); */
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    /* border: 0.185vh solid rgba(255, 255, 255, 0.01); */
     cursor: pointer;
 }
 .card{
@@ -369,7 +362,6 @@ aside form input{
     width: 16.04vw;
     aspect-ratio: 306/484;
     border-radius: 1.526vw;
-    /* border: 0.3125vw solid rgba(255, 255, 255, 0.01); */
     background: url(images/num-alpha.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -380,13 +372,11 @@ aside form input{
     justify-content: center;
     gap: 0.4166vw;
     padding: 1vw;
-    /* border: 0.3125vw solid rgba(255, 255, 255, 0.01); */
 }
 .num-alpha div{
     width: 4.166vw;
     aspect-ratio: 1/1;
     padding: .5vw;
-    /* background: url(images/rounded-key-bg.svg); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -454,11 +444,10 @@ aside form input{
     font-weight: 400;
     border-radius: 0.925vh;
     overflow: hidden;
-    /* border: 0.185vh solid rgba(0, 0, 0, 0.65); */
-    /* background: #0f0f0f; */
+    transition: all .2s ease;
     background: url(images/product-price-bg.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 10.185vh;
     aspect-ratio: 110/30;
     display: flex;
@@ -472,12 +461,11 @@ aside form input{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: rgba(33, 33, 33); */
     background: url(images/product-bg.svg);
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 0.925vh;
-    /* border: 0.185vh solid rgba(0, 0, 0, 0.65); */
+    transition: all .2s ease;
     cursor: pointer;
     opacity: .55;
 }
@@ -508,7 +496,7 @@ aside form input{
 .product:hover div{
     background: url(images/product-hover-bg.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .product:active div{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%), #0F0F0F;
@@ -526,13 +514,12 @@ aside form input{
     background: url(images/blue-selected.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    /* background: linear-gradient(0deg, rgba(29, 120, 227, 0.55) 0%, rgba(29, 120, 227, 0.55) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), #0F0F0F; */
     backdrop-filter: blur(22.5px);
 }
 .active .price, .active:hover .price{
     background: url(images/price-selected-bg.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .active .product-number, .active:hover .product-number{
     border: 2px solid rgba(0, 0, 0, 0.20);
@@ -585,8 +572,8 @@ aside form input{
     justify-content: center;
     flex-direction: column;
     font-weight: 700;
-    /* background: rgba(0, 0, 0, 0.45); */
-    /* border-radius: 20px; */
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 2vw;
 }
 .order-pop-up p{
     color: rgba(255, 255, 255, 0.65);
@@ -610,7 +597,7 @@ aside form input{
     width: 100%;
     height: 100%;
 }
-.order-pop-up .loader-cont img{
+.order-pop-up .loader-cont div:has(img){
     position: absolute;
     top: 50%;
     left: 50%;
@@ -644,4 +631,51 @@ aside form input{
 .method-active .mode div{
     background: #4E9DFA;
     border: 0.277vh solid rgba(29, 120, 227, 0.65);
+}
+.cash.method-active{
+    background: url(images/cash-bg-active.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card.method-active{
+    background: url(images/card-bg-active.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.white-blob{
+    position: absolute;
+    top: 13.3vh;
+    right: 16.25vh;
+    z-index: 0;
+    height: 12.59vh;
+    aspect-ratio: 96/136;
+}
+.white-blob img{
+    width: 100%;
+    height: 100%;
+}
+.price-input-svg{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px dotted rgba(255, 255, 255, 0.45);
+    padding-bottom: 1vh;
+    width: 10vh;
+}
+.price-input-svg input{
+    border: 0;
+    padding: 0;
+    width: 8vh;
+}
+.price-form svg{
+    width: 0.9vw;
+    aspect-ratio: 19/16;
+}
+.loader-cont div:has(img){
+    background: url(images/glow-product.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.loader-cont img{
+    max-width: 100%;
+    max-height: 100%;
 }
