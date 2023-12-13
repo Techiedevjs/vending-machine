@@ -203,6 +203,7 @@ const pushProducts = (data) => {
             <span class="product-number">${productNumber}</span>
             <div>
                 <img src=${imageUrl} alt="">
+                <span class="product-bg"></span>
             </div>
             <p class="price">${productPrice.toFixed(2)}</p>
             <section class="white-blob"><img src="images/white-blob.svg" alt=""></section>
