@@ -1,122 +1,122 @@
 const products = [
     {
-        name: 'coca cola',
+        name: 'bars',
         productNumber: 'a1',
         productPrice: 35,
-        imageUrl: 'images/coca-cola.png'
+        imageUrl: 'images/bars.png'
     },
     {
-        name: 'mars',
+        name: 'bullish',
         productNumber: 'a2',
         productPrice: 35,
-        imageUrl: 'images/mars.png'
+        imageUrl: 'images/bullish.png'
     },
     {
-        name: 'coca cola',
+        name: 'caremils',
         productNumber: 'a3',
         productPrice: 35,
-        imageUrl: 'images/coca-cola.png'
+        imageUrl: 'images/caremils.png'
     },
     {
-        name: 'snickers',
+        name: 'dopecola',
         productNumber: 'a4',
         productPrice: 35,
-        imageUrl: 'images/snickers.png'
+        imageUrl: 'images/dopecola.png'
     },
     {
-        name: 'coca cola',
+        name: 'bars',
         productNumber: 'a5',
         productPrice: 35,
-        imageUrl: 'images/coca-cola.png'
+        imageUrl: 'images/bars.png'
     },
     {
-        name: 'coca cola',
+        name: 'bullish',
         productNumber: 'b1',
         productPrice: 35,
-        imageUrl: 'images/coca-cola.png'
+        imageUrl: 'images/bullish.png'
     },
     {
-        name: 'coca cola',
+        name: 'caremils',
         productNumber: 'b2',
         productPrice: 35,
-        imageUrl: 'images/coca-cola.png'
+        imageUrl: 'images/caremils.png'
     },
     {
-        name: 'coca cola',
+        name: 'dopecola',
         productNumber: 'b3',
         productPrice: 35,
-        imageUrl: 'images/coca-cola.png'
+        imageUrl: 'images/dopecola.png'
     },
     {
-        name: 'coca cola',
+        name: 'bars',
         productNumber: 'b4',
         productPrice: 35,
-        imageUrl: 'images/coca-cola.png'
+        imageUrl: 'images/bars.png'
     },{
-        name: 'coca cola',
+        name: 'bullish',
         productNumber: 'b5',
         productPrice: 35,
-        imageUrl: 'images/coca-cola.png'
+        imageUrl: 'images/bullish.png'
     },
     {
-        name: 'coca cola',
+        name: 'caremils',
         productNumber: 'c1',
         productPrice: 35,
-        imageUrl: 'images/coca-cola.png'
+        imageUrl: 'images/caremils.png'
     },
     {
-        name: 'coca cola',
+        name: 'dopecola',
         productNumber: 'c2',
         productPrice: 35,
-        imageUrl: 'images/coca-cola.png'
+        imageUrl: 'images/dopecola.png'
     },
     {
-        name: 'coca cola',
+        name: 'bars',
         productNumber: 'c3',
         productPrice: 35,
-        imageUrl: 'images/coca-cola.png'
+        imageUrl: 'images/bars.png'
     },
     {
-        name: 'coca cola',
+        name: 'bullish',
         productNumber: 'c4',
         productPrice: 35,
-        imageUrl: 'images/coca-cola.png'
+        imageUrl: 'images/bullish.png'
     },
     {
-        name: 'coca cola',
+        name: 'caremils',
         productNumber: 'c5',
         productPrice: 35,
-        imageUrl: 'images/coca-cola.png'
+        imageUrl: 'images/caremils.png'
     },
     {
-        name: 'coca cola',
+        name: 'dopecola',
         productNumber: 'd1',
         productPrice: 35,
-        imageUrl: 'images/coca-cola.png'
+        imageUrl: 'images/dopecola.png'
     },
     {
-        name: 'coca cola',
+        name: 'bars',
         productNumber: 'd2',
         productPrice: 35,
-        imageUrl: 'images/coca-cola.png'
+        imageUrl: 'images/bars.png'
     },
     {
-        name: 'coca cola',
+        name: 'bullish',
         productNumber: 'd3',
         productPrice: 35,
-        imageUrl: 'images/coca-cola.png'
+        imageUrl: 'images/bullish.png'
     },
     {
-        name: 'coca cola',
+        name: 'caremils',
         productNumber: 'd4',
         productPrice: 35,
-        imageUrl: 'images/coca-cola.png'
+        imageUrl: 'images/caremils.png'
     },
     {
-        name: 'coca cola',
+        name: 'dopecola',
         productNumber: 'd5',
         productPrice: 35,
-        imageUrl: 'images/coca-cola.png'
+        imageUrl: 'images/dopecola.png'
     },
 ]
 document.querySelector('.product-number-search').focus()
