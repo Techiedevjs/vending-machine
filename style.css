@@ -510,7 +510,13 @@ aside form input{
     background: url(images/product-hover-bg.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    /* opacity: 1; */
 }
+/* #a5:hover .product-bg, #a1:hover .product-bg{
+    opacity: 0;
+    pointer-events: none;
+    transition: all .2s ease;
+} */
 .product:active div{
     opacity: 1;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%), #0F0F0F;
@@ -529,6 +535,8 @@ aside form input{
     background: url(images/blue-selected.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    /* opacity: 1; */
+    /* z-index: 2; */
 }
 .active .price, .active:hover .price{
     background: url(images/price-selected-bg.svg);
