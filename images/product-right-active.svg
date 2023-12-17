@@ -1,0 +1,18 @@
+<svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_b_20230_1557)">
+<path d="M0 10C0 4.47715 4.47715 0 10 0H80C96.5685 0 110 13.4315 110 30V100C110 105.523 105.523 110 100 110H10C4.47715 110 0 105.523 0 100V10Z" fill="#0F0F0F"/>
+<path d="M0 10C0 4.47715 4.47715 0 10 0H80C96.5685 0 110 13.4315 110 30V100C110 105.523 105.523 110 100 110H10C4.47715 110 0 105.523 0 100V10Z" fill="black" fill-opacity="0.25"/>
+<path d="M0 10C0 4.47715 4.47715 0 10 0H80C96.5685 0 110 13.4315 110 30V100C110 105.523 105.523 110 100 110H10C4.47715 110 0 105.523 0 100V10Z" fill="#1D78E3" fill-opacity="0.55"/>
+<path d="M10 1H80C96.0163 1 109 13.9837 109 30V100C109 104.971 104.971 109 100 109H10C5.02943 109 1 104.971 1 100V10C1 5.02943 5.02944 1 10 1Z" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
+<path d="M10 1H80C96.0163 1 109 13.9837 109 30V100C109 104.971 104.971 109 100 109H10C5.02943 109 1 104.971 1 100V10C1 5.02943 5.02944 1 10 1Z" stroke="#1D78E3" stroke-opacity="0.45" stroke-width="2"/>
+<path d="M10 1H80C96.0163 1 109 13.9837 109 30V100C109 104.971 104.971 109 100 109H10C5.02943 109 1 104.971 1 100V10C1 5.02943 5.02944 1 10 1Z" stroke="white" stroke-opacity="0.2" stroke-width="2"/>
+</g>
+<defs>
+<filter id="filter0_b_20230_1557" x="-45" y="-45" width="200" height="200" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="22.5"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_20230_1557"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_20230_1557" result="shape"/>
+</filter>
+</defs>
+</svg>
